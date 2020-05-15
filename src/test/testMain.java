@@ -15,10 +15,10 @@ public class testMain {
 		Customer customer1 = new Customer(19,"±è");
 		Customer customer2 = new Customer(19,"±è");
 		Customer customer3 = new Customer(19,"±è");
-	
+		
+		System.out.println(customer.getAge());
 		Paikdabang paikdabang = new Paikdabang();
 		ArrayList<Empolyee> empolyeeList = new ArrayList<Empolyee>();
-	
 		for(int i=0; i<empolyeeList.size();i++) {
 			System.out.println(empolyeeList.get(i));
 		}

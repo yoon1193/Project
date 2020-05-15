@@ -29,5 +29,10 @@ public class HongKong implements Theborn {
 		// TODO Auto-generated method stub
 
 	}
+	@Override
+	public void reservation() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
