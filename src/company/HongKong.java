@@ -2,20 +2,21 @@ package company;
 
 import java.util.ArrayList;
 
+import Order.order;
 import person.Customer;
-import person.Empolyee;
+import person.Employee;
 
 public class HongKong implements Theborn {
 	private String b;
 	private String j;
-	private ArrayList<Empolyee> empolyeeList = new ArrayList<Empolyee>();
+	private ArrayList<Employee> EmployeeList = new ArrayList<Employee>();
 	private ArrayList<Customer> customerList = new ArrayList<Customer>();
 	
-	public ArrayList<Empolyee> getEmpolyeeList(){
-		return empolyeeList;
+	public ArrayList<Employee> getEmployeeList(){
+		return EmployeeList;
 	}
-	public void setEmpolyeeList(ArrayList<Empolyee> empolyeeList) {
-		this.empolyeeList = empolyeeList;
+	public void setEmployeeList(ArrayList<Employee> EmployeeList) {
+		this.EmployeeList = EmployeeList;
 	}
 	public ArrayList<Customer> getCustomerList(){
 		return customerList;
@@ -24,15 +25,26 @@ public class HongKong implements Theborn {
 		this.customerList = customerList;
 	}
 	
+	
 	@Override
 	public void sell() {
 		// TODO Auto-generated method stub
 
 	}
+
 	@Override
-	public void reservation() {
-		// TODO Auto-generated method stub
-		
+	public int getSales() {
+		int priceAll=0;
+		for(int i=0; i<EmployeeList.size();i++) {
+			Employee e = EmployeeList.get(i);
+			ArrayList<order> orderList = e.orderList;
+			for(int j=0;j<orderList.size();j++) {
+				priceAll+=orderList.get(j).price;
+			}
+			
+		}
+		return priceAll;
 	}
+	
 
 }
