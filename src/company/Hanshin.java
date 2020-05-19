@@ -10,11 +10,11 @@ public class Hanshin implements Theborn {
 	
 	private ArrayList<Employee> EmployeeList = new ArrayList<Employee>();
 	private ArrayList<Customer> customerList = new ArrayList<Customer>();
-	public static order[] hm = {new order("¥ﬂπﬂ",12000),new order("≈Î¥ﬂ",10000)};
+	public static order[] hanshinMenu = {new order("1.¥ﬂπﬂ",12000),new order("2.≈Î¥ﬂ",10000)};
 	
 	public void showMenu() {
-		for(int i=0;i<hm.length;i++) {
-			System.out.println(hm[i].menu+" "+hm[i].price);
+		for(int i=0;i<hanshinMenu.length;i++) {
+			System.out.println(hanshinMenu[i].menu+" "+hanshinMenu[i].price);
 		}
 	}
 	public ArrayList<Employee> getEmployeeList(){
@@ -31,11 +31,6 @@ public class Hanshin implements Theborn {
 	}
 
 	@Override
-	public void sell() {
-		// TODO Auto-generated method stub
-
-	}
-	@Override
 	public int getSales() {
 		int priceAll=0;
 		for(int i=0; i<EmployeeList.size();i++) {
@@ -47,6 +42,11 @@ public class Hanshin implements Theborn {
 			
 		}
 		return priceAll;
+	}
+	@Override
+	public int sell() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 

@@ -9,7 +9,13 @@ import person.Employee;
 public class Paikdabang implements Theborn {
 	private ArrayList<Employee> EmployeeList = new ArrayList<Employee>();
 	private ArrayList<Customer> customerList = new ArrayList<Customer>();
+	public static order[] paikdabangMenu = {new order("1.아메리카노",2000),new order("2.라떼",3000)};
 	
+	public void showMenu() {
+		for(int i=0;i<paikdabangMenu.length;i++) {
+			System.out.println(paikdabangMenu[i].menu+" "+paikdabangMenu[i].price);
+		}
+	}
 	public ArrayList<Employee> getEmployeeList(){
 		return EmployeeList;
 	}
@@ -23,11 +29,7 @@ public class Paikdabang implements Theborn {
 		this.customerList = customerList;
 	}
 
-	@Override
-	public void sell() {
-		// TODO Auto-generated method stub
 
-	}
 	
 	@Override
 	public int getSales() {
@@ -41,6 +43,11 @@ public class Paikdabang implements Theborn {
 			
 		}
 		return priceAll;
+	}
+	@Override
+	public int sell() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 

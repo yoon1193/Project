@@ -6,6 +6,6 @@ import person.Employee;
 
 public interface Theborn {
 	public ArrayList<Employee> empolyeeList = null;
-	public void sell();
 	public int getSales();
+	public int sell();
 }
