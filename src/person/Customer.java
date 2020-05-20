@@ -26,7 +26,6 @@ public class Customer {
 		else{
 			e.orderList.add(Paikdabang.paikdabangMenu[m-1]);
 		}
-		
 	}
 	public void setAge(int age) {
 		this.age = age;
