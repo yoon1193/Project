@@ -49,8 +49,7 @@ public class PhoneBookShow {
     public void delete(){
         System.out.println("삭제할 사람의 이름을 입력하세요");
         String name = sc.nextLine();
-        int delete = pb.deletePerson(name);
-        System.out.println(delete + "를 삭제했습니다.");
+        String delete = pb.deletePerson(name);
     }
 
 }

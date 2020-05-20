@@ -27,17 +27,20 @@ public class PhoneBook implements Interface {
 	}
 
 	@Override
-	public int deletePerson(String name) {
+	public String deletePerson(String name) {
 		int deleteCount = 0;
 		Iterator<Person> iterator = personList.iterator();
 		while(iterator.hasNext()){
 			Person person = iterator.next();
 			if(person.getName().equals(name)){
 				iterator.remove();
-				deleteCount++;
+				System.out.println(name+"을/를 삭제했습니다.");
 				}
+			else {
+				System.out.println("등록된 이름이 없습니다.");
 			}
-		return deleteCount;
+		}
+		return name;
 		
 		
 	}

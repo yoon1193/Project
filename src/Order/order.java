@@ -32,7 +32,7 @@ public class order {
 		EmployeeList2.add(new Employee(21,"장다방"));
 		EmployeeList2.add(new Employee(22,"감다방"));
 		ArrayList<Customer> customerList = new ArrayList<Customer>();
-		
+
 		
 		System.out.println("손님의 이름과 나이를 입력");
 		String name = sc.next();
